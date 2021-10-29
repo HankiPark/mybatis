@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import co.hanki.mybatis.comm.DataSource;
+import co.hanki.mybatis.member.service.MemberVO;
 import co.hanki.mybatis.notice.service.NoticeMapper;
 import co.hanki.mybatis.notice.service.NoticeService;
 import co.hanki.mybatis.notice.service.NoticeVO;
@@ -54,6 +55,11 @@ private NoticeMapper map = sqlSession.getMapper(NoticeMapper.class);
 	@Override
 	public List<NoticeVO> noticeSelectNaList(NoticeVO vo) {
 		return map.noticeSelectNaList(vo);
+	}
+
+	@Override
+	public List<NoticeVO> noticeId(MemberVO vo) {
+		return map.noticeId(vo);
 	}
 	
 

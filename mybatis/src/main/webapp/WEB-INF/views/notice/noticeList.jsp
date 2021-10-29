@@ -8,12 +8,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-function CallSort(nid){
-	
-	
-		
-		
-	}
 
 
 function CallNotice(n){
@@ -42,15 +36,11 @@ function CallLook(){
 			<table id ="ta" border="1">
 				<c:if test="${empty message }">
 					<tr>
-						<th width="100" onmouseenter='this.style.background="#fcecae";'
-							onmouseleave='this.style.background="#ffffff";'
-							onclick="CallSort(nid)">글번호</th>
+						<th width="100">글번호</th>
 						<th width="150">작성자</th>
 						<th width="250">제목</th>
 						<th width="150">작성일자</th>
-						<th width="100" onmouseenter='this.style.background="#fcecae";'
-							onmouseleave='this.style.background="#ffffff";'
-							onclick="CallSort(hit)">조회수</th>
+						<th width="100">조회수</th>
 					</tr>
 
 					<c:forEach items="${notices }" var="notice">

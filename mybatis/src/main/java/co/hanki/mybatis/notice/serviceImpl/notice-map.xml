@@ -3,7 +3,8 @@
 <mapper namespace="co.hanki.mybatis.notice.service.NoticeMapper">
 
 	<select id="noticeSelectList" resultType="co.hanki.mybatis.notice.service.NoticeVO">
-	select * from notice order by nid asc	
+	select * from notice order by nid asc  	
+
 	</select>
 
 	<select id="noticeSelect" resultType="co.hanki.mybatis.notice.service.NoticeVO">
@@ -32,5 +33,9 @@
 	
 	<select id="noticeSelectNaList" resultType="co.hanki.mybatis.notice.service.NoticeVO">
 	select * from notice where name like '%'||#{name}||'%'
+	</select>
+	
+	<select id="noticeId" resultType="co.hanki.mybatis.notice.service.NoticeVO">
+	select * from notice where id =#{id}	
 	</select>
 </mapper>

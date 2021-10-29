@@ -29,7 +29,7 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public int MemberInsert(MemberVO vo) {
-		// TODO Auto-generated method stub
+
 		return map.MemberInsert(vo);
 	}
 
@@ -44,5 +44,13 @@ public class MemberServiceImpl implements MemberService{
 		// TODO Auto-generated method stub
 		return map.MemberDelete(vo);
 	}
+
+	@Override
+	public int IsIdCheck(MemberVO vo) {
+		
+		return map.IsIdCheck(vo);
+	}
+	
+
 
 }

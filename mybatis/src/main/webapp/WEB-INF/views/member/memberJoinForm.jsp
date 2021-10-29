@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 function CallValidation(){
+	
 	var pw= frm.password.value;
 	var pw1= frm.password1.value;
 	if(frm.name.value==""){alert("이름을 입력하세요");frm.name.focus(); return false;}
+	
+	
 	if(pw==pw1){
 		frm.submit();
 	}else{

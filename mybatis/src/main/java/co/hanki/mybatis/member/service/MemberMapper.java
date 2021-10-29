@@ -8,4 +8,5 @@ public interface MemberMapper { // mybatis mapper에서 사용
 	int MemberInsert(MemberVO vo);
 	int MemberUpdate(MemberVO vo);
 	int MemberDelete(MemberVO vo);
+	int IsIdCheck(MemberVO vo);
 }

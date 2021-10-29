@@ -22,6 +22,8 @@ public class MemberJoin implements Command {
 		vo.setAddress(request.getParameter("address"));
 		vo.setTel(request.getParameter("tel"));
 		vo.setAuthor(request.getParameter("author"));
+		n= memberDao.IsIdCheck(vo);
+		
 		n = memberDao.MemberInsert(vo);
 		if(n!=0) {
 			request.setAttribute("join", "회원가입을 축하드립니다.");

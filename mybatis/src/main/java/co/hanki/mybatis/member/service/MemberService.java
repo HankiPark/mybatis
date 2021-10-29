@@ -8,4 +8,5 @@ MemberVO MemberSelect(MemberVO vo);
 int MemberInsert(MemberVO vo);
 int MemberUpdate(MemberVO vo);
 int MemberDelete(MemberVO vo);
+int IsIdCheck(MemberVO vo);
 }
