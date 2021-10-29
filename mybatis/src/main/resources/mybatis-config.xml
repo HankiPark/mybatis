@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<properties resource="db.properties"  /> <!-- db환경파일을 로드  -->
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED"> <!-- connection pool 사용 (미리 db와 연결되어있음)-->
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  
+  
+  <mappers>
+    <mapper resource="co/hanki/mybatis/member/serviceImpl/member-map.xml"/>
+    <mapper resource="co/hanki/mybatis/notice/serviceImpl/notice-map.xml"/>
+  </mappers>
+</configuration>
